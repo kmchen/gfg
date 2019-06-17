@@ -106,7 +106,7 @@ func (esClient *ElasticSearchClient) DoSearch(searchService *elastic.SearchServi
 	}
 
 	if searchResult.TotalHits() > 0 {
-		log.Printf("Found a total of %d data\n", searchResult.TotalHits(), searchResult.Hits.Hits)
+		log.Printf("Found a total of %d data\n", searchResult.TotalHits())
 		var hitsLength = len(searchResult.Hits.Hits)
 		var dataList = make([]ShakespeareData, hitsLength)
 		for index, hit := range searchResult.Hits.Hits {
