@@ -4,12 +4,11 @@
         - Aquire new token for authentication
     ```sh
     $ curl -d '{"Id":"clientId0"}' -H "Content-Type: application/json" -X POST http://localhost:8000/token
-    $ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6ImNsaWVudElkMCIsImV4cCI6IjIwMTktMDYtMTdUMDg6MjY6MDQuODE1MjM1M1oifQ.6cBVFrnneBabyxdMh8i5VbRPiSXzeG1EKOF3KipMpLM
     ```
  - GET /shakespeare/v1
         - Get Shakespeare data with authentication
      ```sh
-    $ curl -H "X-Session-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6ImNsaWVudElkMCIsImV4cCI6IjIwMTktMDYtMTdUMDg6MjY6MDQuODE1MjM1M1oifQ.6cBVFrnneBabyxdMh8i5VbRPiSXzeG1EKOF3KipMpLM" http://localhost:8000/shakespeare/v1?sort_by=line_id&offset=0&limit=10&filter=speaker:KING%20HENRY%20IV&play_name=Henry%20IV
+    $ curl -H "X-Session-Token: {YOUR_TOKEN}" http://localhost:8000/shakespeare/v1?sort_by=line_id&offset=0&limit=10&filter=speaker:KING%20HENRY%20IV&play_name=Henry%20IV
     ```
 - GET /shakespeare/v2
         - Get Shakespeare data with without authentication
